@@ -12,11 +12,11 @@ mu = 0.1;   % Reibungskoeffizient Teflon
 
 L_A = 0.11*10^-3;  % [H] Ankerinduktivität
 R_A = 0.36;    % [Ohm] Ankerwiderstand
-C_Phi = 42.43; % [mNm/A] Maschinenkonstante    C_Phi = k_M
+C_Phi = 42.43; % [m*Nm/A] Maschinenkonstante    C_Phi = k_M
 k_M = C_Phi;
 KL_R_VH = [10 20 30 40; 0.57 0.2905 0.255 0.207];    % Kennlinie R_VH
 c_w = 0.81;             % Luftwiderstandbeiwert Gehäuse und Batterie
-A = 115.5;              % Querschnittsfläche
+A = 115.5e-4;           % [m²] Querschnittsfläche
 phi_luft = 1.2;         % Luftdichte
 m_w = 1.604 ;         % Masse (ohne Räder)
 m_ges  = m_w + 4 * m_Rx;    % GesamtMasse
