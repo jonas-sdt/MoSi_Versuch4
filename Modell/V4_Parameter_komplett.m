@@ -7,22 +7,21 @@
 
     L_A = 0.11*10^-3;   % [H] Ankerinduktivität
     R_A = 0.36;         % [Ohm] Ankerwiderstand
-    C_Phi = 42.43e-3;   % [Nm/A] Maschinenkonstante    C_Phi = k_M
-    k_M = C_Phi;        % Kopie von C_Phi
-
+    k_M = -42.43e-3;   % [Nm/A] Maschinenkonstante
+    
 
 %------------------------------------------------------------------------------------------------------------%
 % Parameter Räder
 
     % Teflonräder
-    J_Rx = 1016e-5;             % [kg*m²] Massenträgheitmoment je Rad Teflon
+    J_Rx = 1.016e-5;             % [kg*m²] Massenträgheitmoment je Rad Teflon
     m_Rx = 0.0298;              % [kg] Masse je Rad Teflon
-    mu = 0.1;                   % [1] Reibungskoeffizient Teflon
+    mu = 0.05;                   % [1] Reibungskoeffizient Teflon
 
     % Stahlräder
-    % J_Rx = 4094e-5;             % [kg*m²] Massenträgheitmoment je Rad Stahl
+    % J_Rx = 4.094e-5;             % [kg*m²] Massenträgheitmoment je Rad Stahl
     % m_Rx =  0.13825             % [kg] Masse je Rad Stahl 
-    % mu = 0.3;                   % [1] Reibungskoeffizient Teflon
+    % mu = 0.05;                   % [1] Reibungskoeffizient Stahl
 
     r_Rx = 0.025;               % [m] Radius je Rad Teflon & Stahl
     m_Ersatz_Rad = (4 * J_Rx)/(r_Rx^2); % [kg] Masse Ersatzrad
@@ -38,9 +37,9 @@
     m_ges  = m_w + 4 * m_Rx;    % [kg] Gesamtmasse
 
     J_EM = 164e-7;          % [kgm²] Massenträgheitmoment E-Maschine
-    J_KR = 1057e-6;         % [kgm²] Massenträgheitmoment Kegelradgetriebe
-    J_W = 2333e-7;          % [kgm²] Massenträgheitsmoment Antriebswelle
-    J_ZR = 6132e-6;         % [kgm²] Massenträgheitsmoment Antriebsrad
+    J_KR = 1.057e-6;         % [kgm²] Massenträgheitmoment Kegelradgetriebe
+    J_W = 2.333e-7;          % [kgm²] Massenträgheitsmoment Antriebswelle
+    J_ZR = 6.132e-6;         % [kgm²] Massenträgheitsmoment Antriebsrad
     r_ZR = 0.021;           % [m] wirksamer Radius Antriebsrad
 
     m_trans = m_w + 4 * m_Rx;                               % [kg]  translatorisch bewegte Masse

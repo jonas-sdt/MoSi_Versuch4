@@ -3,13 +3,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Parameter GSM
-    k_M = 42.43e-3;             % [Nm/A] Maschinenkonstante
+    k_M = -42.43e-3;             % [Nm/A] Maschinenkonstante
 
 % Parameter Räder
-    J_Rx = 1016e-5;             % [kg*m²] Massenträgheitmoment je Rad Teflon
+    J_Rx = 1.016e-5;             % [kg*m²] Massenträgheitmoment je Rad Teflon (war fehlerhaft)
     m_Rx = 0.0298;              % [kg] Masse je Rad Teflon
     r_Rx = 0.025;               % [m] Radius je Rad Teflon & Stahl
-    mu = 0.1;                   % [1] Reibungskoeffizient Teflon
+    mu = 0.05;                   % [1] Reibungskoeffizient Teflon
     m_Ersatz_Rad = (4 * J_Rx)/(r_Rx^2); % [kg] Masse Ersatzrad
 
 % Mechanische Parameter Fahrzeug + GSM
@@ -20,9 +20,9 @@
     m_ges  = m_w + 4 * m_Rx;    % [kg] Gesamtmasse
     m_trans = m_w + 4 * m_Rx;   % [kg]  translatorisch bewegte Masse
     J_EM = 164e-7;              % [kgm²] Massenträgheitmoment E-Maschine
-    J_KR = 1057e-6;             % [kgm²] Massenträgheitmoment Kegelradgetriebe
-    J_W = 2333e-7;              % [kgm²] Massenträgheitsmoment Antriebswelle
-    J_ZR = 6132e-6;             % [kgm²] Massenträgheitsmoment Antriebsrad
+    J_KR = 1.057e-6;             % [kgm²] Massenträgheitmoment Kegelradgetriebe  (war fehlerhaft)
+    J_W = 2.333e-7;              % [kgm²] Massenträgheitsmoment Antriebswelle  (war fehlerhaft)
+    J_ZR = 6.132e-6;             % [kgm²] Massenträgheitsmoment Antriebsrad (war fehlerhaft)
     m_Ersatz_Antr = (J_EM + 2*J_KR+J_W + J_ZR)/(r_ZR^2);    % [kg]  Ersatzmasse der Antriebskomponenten (Motor, 
                                                             %       Kegelradgetriebe, Welle, Antriebsrad)
     k = (m_trans + m_Ersatz_Antr + m_Ersatz_Rad)/m_trans;   % Drehmassenfaktor k
