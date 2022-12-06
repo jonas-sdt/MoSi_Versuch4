@@ -15,16 +15,16 @@
 % Parameter Räder
 
     % Teflonräder
-    J_Rx = 1016e-5;             % [] Massenträgheitmoment je Rad Teflon
+    J_Rx = 1016e-5;             % [kg*m²] Massenträgheitmoment je Rad Teflon
     m_Rx = 0.0298;              % [kg] Masse je Rad Teflon
-    mu = 0.1;                   % [] Reibungskoeffizient Teflon
+    mu = 0.1;                   % [1] Reibungskoeffizient Teflon
 
     % Stahlräder
-    % J_Rx = 4094e-5;             % [] Massenträgheitmoment je Rad Stahl
-    % m_Rx =  0.13825             % [] Masse je Rad Stahl 
-    % mu = 0.3;                   % [] Reibungskoeffizient Teflon
+    % J_Rx = 4094e-5;             % [kg*m²] Massenträgheitmoment je Rad Stahl
+    % m_Rx =  0.13825             % [kg] Masse je Rad Stahl 
+    % mu = 0.3;                   % [1] Reibungskoeffizient Teflon
 
-    r_Rx = 0.025;               % [] Radius je Rad Teflon & Stahl
+    r_Rx = 0.025;               % [m] Radius je Rad Teflon & Stahl
     m_Ersatz_Rad = (4 * J_Rx)/(r_Rx^2); % [kg] Masse Ersatzrad
 
 
