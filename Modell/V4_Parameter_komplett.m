@@ -34,7 +34,6 @@
     KL_R_VH = [10 20 30 40; 0.57 0.2905 0.255 0.207];    % [ohm] Kennlinie R_VH
     c_w = 0.81;                 % Luftwiderstandbeiwert Gehäuse und Batterie
     A = 115.5e-4;               % [m²] Querschnittsfläche
-    phi_luft = 1.2;             % [kg/m³]Luftdichte
     m_w = 1.604 ;               % [kg] Masse (ohne Räder)
     m_ges  = m_w + 4 * m_Rx;    % [kg] Gesamtmasse
 
@@ -56,3 +55,4 @@
 % Naturkonstanten
 
     Erdbeschleunigung = 9.81;   % [m/s²] Erdbeschleunigung
+    phi_luft = 1.2;             % [kg/m³]Luftdichte
