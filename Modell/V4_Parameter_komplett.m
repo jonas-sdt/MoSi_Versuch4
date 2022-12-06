@@ -31,26 +31,28 @@
 %------------------------------------------------------------------------------------------------------------%
 % Mechanische Parameter Fahrzeug + GSM
 
-    KL_R_VH = [10 20 30 40; 0.57 0.2905 0.255 0.207];    % Kennlinie R_VH
-    c_w = 0.81;             % Luftwiderstandbeiwert Gehäuse und Batterie
-    A = 115.5e-4;           % [m²] Querschnittsfläche
-    phi_luft = 1.2;         % Luftdichte
-    m_w = 1.604 ;           % Masse (ohne Räder)
-    m_ges  = m_w + 4 * m_Rx;    % Gesamtmasse
+    KL_R_VH = [10 20 30 40; 0.57 0.2905 0.255 0.207];    % [ohm] Kennlinie R_VH
+    c_w = 0.81;                 % Luftwiderstandbeiwert Gehäuse und Batterie
+    A = 115.5e-4;               % [m²] Querschnittsfläche
+    phi_luft = 1.2;             % [kg/m³]Luftdichte
+    m_w = 1.604 ;               % [kg] Masse (ohne Räder)
+    m_ges  = m_w + 4 * m_Rx;    % [kg] Gesamtmasse
 
-    J_EM = 164e-7;          % Massenträgheitmoment E-Maschine
-    J_KR = 1057e-6;         % Massenträgheitmoment Kegelradgetriebe
-    J_W = 2333e-7;          % Massenträgheitsmoment Antriebswelle
-    J_ZR = 6132e-6;         % Massenträgheitsmoment Antriebsrad
-    r_Zr = 0.021;           % wirksamer Radius Antriebsrad
-    r_ZR = 0.021;           % wirksamer Radius Antriebsrad
-    m_trans = m_w + 4 * m_Rx;
-    m_Ersatz_Antr = (J_EM + 2*J_KR+J_W + J_ZR)/(r_Zr^2);
-    k = (m_trans + m_Ersatz_Antr + m_Ersatz_Rad)./m_trans;
+    J_EM = 164e-7;          % [kgm²] Massenträgheitmoment E-Maschine
+    J_KR = 1057e-6;         % [kgm²] Massenträgheitmoment Kegelradgetriebe
+    J_W = 2333e-7;          % [kgm²] Massenträgheitsmoment Antriebswelle
+    J_ZR = 6132e-6;         % [kgm²] Massenträgheitsmoment Antriebsrad
+    r_ZR = 0.021;           % [m] wirksamer Radius Antriebsrad
+
+    m_trans = m_w + 4 * m_Rx;                               % [kg]  translatorisch bewegte Masse
+    m_Ersatz_Antr = (J_EM + 2*J_KR+J_W + J_ZR)/(r_Zr^2);    % [kg]  Ersatzmasse der Antriebskomponenten (Motor, 
+                                                            %       Kegelradgetriebe, Welle, Antriebsrad)
+                                                            
+    k = (m_trans + m_Ersatz_Antr + m_Ersatz_Rad)/m_trans;   % Drehmassenfaktor k
     
     J = J_EM + J_KR + J_W + J_ZR + 4*J_Rx;   % [kg*m^2] Trägheitsmoment 
 
 %------------------------------------------------------------------------------------------------------------%
 % Naturkonstanten
 
-    Erdbeschleunigung = 9.81;   %Erdbeschleunigung
+    Erdbeschleunigung = 9.81;   % [m/s²] Erdbeschleunigung
