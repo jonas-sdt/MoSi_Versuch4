@@ -45,7 +45,7 @@
     r_ZR = 0.021;           % [m] wirksamer Radius Antriebsrad
 
     m_trans = m_w + 4 * m_Rx;                               % [kg]  translatorisch bewegte Masse
-    m_Ersatz_Antr = (J_EM + 2*J_KR+J_W + J_ZR)/(r_Zr^2);    % [kg]  Ersatzmasse der Antriebskomponenten (Motor, 
+    m_Ersatz_Antr = (J_EM + 2*J_KR+J_W + J_ZR)/(r_ZR^2);    % [kg]  Ersatzmasse der Antriebskomponenten (Motor, 
                                                             %       Kegelradgetriebe, Welle, Antriebsrad)
                                                             
     k = (m_trans + m_Ersatz_Antr + m_Ersatz_Rad)/m_trans;   % Drehmassenfaktor k
