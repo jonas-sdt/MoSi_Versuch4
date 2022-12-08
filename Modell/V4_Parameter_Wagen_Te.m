@@ -28,5 +28,5 @@
     k = (m_trans + m_Ersatz_Antr + m_Ersatz_Rad)/m_trans;   % Drehmassenfaktor k
 
 % Naturkonstanten
-    Erdbeschleunigung = 9.81;   % [m/s²] Erdbeschleunigung
+    Erdbeschleunigung = -9.81;   % [m/s²] Erdbeschleunigung
     phi_luft = 1.2;             % [kg/m³]Luftdichte

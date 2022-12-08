@@ -16,12 +16,12 @@
     % Teflonräder
     J_Rx = 1.016e-5;             % [kg*m²] Massenträgheitmoment je Rad Teflon
     m_Rx = 0.0298;              % [kg] Masse je Rad Teflon
-    mu = 0.05;                   % [1] Reibungskoeffizient Teflon
+    mu = 0.045;                   % [1] Reibungskoeffizient Teflon
 
     % Stahlräder
-    % J_Rx = 4.094e-5;             % [kg*m²] Massenträgheitmoment je Rad Stahl
-    % m_Rx =  0.13825             % [kg] Masse je Rad Stahl 
-    % mu = 0.05;                   % [1] Reibungskoeffizient Stahl
+%     J_Rx = 4.094e-5;             % [kg*m²] Massenträgheitmoment je Rad Stahl
+%     m_Rx = 0.13825;             % [kg] Masse je Rad Stahl 
+%     mu = 0.04;                   % [1] Reibungskoeffizient Stahl
 
     r_Rx = 0.025;               % [m] Radius je Rad Teflon & Stahl
     m_Ersatz_Rad = (4 * J_Rx)/(r_Rx^2); % [kg] Masse Ersatzrad
@@ -53,5 +53,5 @@
 %------------------------------------------------------------------------------------------------------------%
 % Naturkonstanten
 
-    Erdbeschleunigung = 9.81;   % [m/s²] Erdbeschleunigung
+    Erdbeschleunigung = -9.81;   % [m/s²] Erdbeschleunigung
     phi_luft = 1.2;             % [kg/m³]Luftdichte
